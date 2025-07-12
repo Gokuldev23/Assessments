@@ -1,9 +1,7 @@
-// File: components/nodes/MessageNode.jsx
 import React from "react";
 import { Handle, Position } from "@xyflow/react";
 
 const MessageNode = ({ data }) => {
-
   return (
     <div className="border border-blue-600 rounded-xl min-w-xs overflow-clip">
       {/* Left handle for incoming connections */}

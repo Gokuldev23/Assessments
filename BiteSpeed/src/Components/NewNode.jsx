@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import { LuMessageCircleMore } from "react-icons/lu";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaEdit } from "react-icons/fa";
-
-
 import { DraggableNode } from "./DraggableNode";
 
 export default function Node({ nodeType, label, content }) {
@@ -13,12 +10,11 @@ export default function Node({ nodeType, label, content }) {
     <>
       {!toggleEdit ? (
         <div className="relative">
-          <DraggableNode
-            type={nodeType}
-            label={label}
-            content={newContent}
-          />
-          <button onClick={()=>setToggleEdit(!toggleEdit)} className="absolute top-4 right-4 text-white">
+          <DraggableNode type={nodeType} label={label} content={newContent} />
+          <button
+            onClick={() => setToggleEdit(!toggleEdit)}
+            className="absolute top-4 right-4 text-white"
+          >
             <FaEdit />
           </button>
         </div>
